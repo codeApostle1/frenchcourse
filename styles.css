@@ -1,189 +1,201 @@
-
 * {
     box-sizing: border-box;
-      margin: 0;
+    margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     font-family: 'Arial', sans-serif;
-}
-
-:root {
+  }
+  
+  :root {
     --primary-color: #002B7F;
     --secondary-color: #F50057;
     --background-color: #f1f1f1;
     --text-color: #333;
-    --font-family: 'Arial', sans-serif;
-  
-
-}
-
-/* body {
-  
-} */
-
-header { 
-
-    height: 100px;
-    background-color: var(--primary-color);
-    color: white;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.header-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.big {
-  margin-right: auto;
-}
-
-img {
-  max-width: 300px;
-  /* min-height: fit-content; */
-}
-
-/* landing page */
-
-.landing-page {
-  display: flex;
-
-}
-
-.divider {
-width: 4px;
-background-color: var(--secondary-color);
-max-height: 60%;
-margin: 2rem ;
-
-}
-
-
-
-
-/*
-
-  
-  /* Landing Page Styles */
-  /* .landing-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f1f1;
-    padding: 30px;
-    flex: 80%;
   }
-
+  
   body {
-    display: flex;
-  }
+    /* background: linear-gradient(to bottom right, #fbcad8, #ffffff, #b3c6f7); */
 
-  aside {
-    flex: 20%;
-   height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  }
-
-  .side-menu {
-    margin-top: 15%;
-    position: fixed;
-    height: 100%;
-    background-color: var(--background-color);
+    background: linear-gradient(
     
+      to bottom right,
+    rgba(245, 0, 87, 0.2) 0%,     /* Soft red */
+    rgba(255, 255, 255, 1) 30%,   /* Strong white */
+    rgba(255, 255, 255, 1) 70%,   /* Long white middle */
+    rgba(0, 43, 127, 0.2) 100%      /* Blue ends */
+    );
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
   
   header {
-    text-align: center;
-    margin-bottom: 40px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    color: #002B7F; 
-    margin-bottom: 10px;
-    padding: 0 40px;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    color: #F50057;
-  }
-
-  .hero-section {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: #f1f1f1;
-    padding: 20px;
-    margin-top: 20px;
+    align-items: center;
+    padding: 10px;
+    z-index: 1000;
   }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 
+  }
+  
+  .nav-bar a {
+    color: white;
+    margin-left: 1rem;
+    font-weight: bold;
+  }
+  
+  .nav-bar a:hover {
+    color: var(--secondary-color);
+  }
+  
   .landing-page {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    /* background: linear-gradient(to bottom right, #ffe6ec, #ffffff, #e0ecff); */
+  
+     padding-top: 150px; 
+    
+    
+
   }
   
-  /* Form Container 
-  .form-container {
-    background-color: #ffffff;
-    padding: 20px;
+  .hero-section {
+    flex: 0 0 70%;
+    min-width: 280px;
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .logo {
+  max-width: 100%;
+  height: auto;
+  /* object-fit: contain; */
+  background-position: calc();
+  display: block;
+  margin: 0 auto;
+  }
+  .product-image {
+    max-width: 100%;
+   width: 90%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 250px; /* or any value like 200px, 180px, etc */
+    background-color: red;
+   
+    /* object-fit: cover; */
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+    /* border: 3px solid var(--primary-color); */
+
+    /* clip-path: polygon(0 0, 6% 0, 15% 0%, 85% 0%, 87% 0, 100% 0, 100% 87%, 85% 87%, 67% 87%, 59% 100%, 16% 100%, 0 100%); */
+    border-bottom: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+  }
+  
+  /* .divider {
+    width: 4px;
+    background-color: var(--secondary-color);
+    height: 80%;
+    min-height: 200px;
+    border-radius: 4px;
+  } */
+
+  /* COURSE ROW */
+
+  .course-row {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .form-container {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   
   .form-container h2 {
-    color: #002B7F; 
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
   }
   
-  .form-container input {
+  form input, form button {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
   }
   
-  .form-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #F50057; 
+  form button {
+    background-color: var(--secondary-color);
     color: white;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
     cursor: pointer;
+    transition: background 0.3s;
   }
   
-  .form-container button:hover {
-    background-color: #d4004b; 
+  form button:hover {
+    background-color: #c40045;
   }
   
-  .logo {
-    width: 40%;
-    min-height: 200px;
+  @media (max-width: 768px) {
+    .landing-page {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .divider {
+      display: none;
+    }
+  
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-bar {
+      margin-top: 0.5rem;
+    }
   }
-
-  .product-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    
-  }
-   */
+  
