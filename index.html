@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- AOS CSS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -15,190 +15,171 @@
 
   <header>
     <div class="header-content">
-        <h1 class="big">French Course</h1>
+        <h1 class="big">PhilCourse</h1>
+
+        
+
         <nav class="nav-bar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+          <ul class=" sidebar" id="sidebar">
+
+            <li class="cancel-button" id="cancelMenu"><svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>cancel2</title> <path d="M19.587 16.001l6.096 6.096c0.396 0.396 0.396 1.039 0 1.435l-2.151 2.151c-0.396 0.396-1.038 0.396-1.435 0l-6.097-6.096-6.097 6.096c-0.396 0.396-1.038 0.396-1.434 0l-2.152-2.151c-0.396-0.396-0.396-1.038 0-1.435l6.097-6.096-6.097-6.097c-0.396-0.396-0.396-1.039 0-1.435l2.153-2.151c0.396-0.396 1.038-0.396 1.434 0l6.096 6.097 6.097-6.097c0.396-0.396 1.038-0.396 1.435 0l2.151 2.152c0.396 0.396 0.396 1.038 0 1.435l-6.096 6.096z"></path> </g></svg></li> 
+
+            <li > <a href="#home">Home</a></li>
+            <li><a href="#order-section">Courses</a></li>
+            <li> <a href="#about">About</a></li>  
+                      
+          </ul>
+           
+          <ul class="large-menu">
+            <li class="hide-mobile"> <a href="#home">Home</a></li>
+
+            <li class="hide-mobile"><a href="#order-section">Courses</a></li>
+
+            <li class="hide-mobile"> <a href="#about">About</a></li>  
+
+            <li class="menu-bar" id="menu">  <a href="#" class="menu-item">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </a></li>   
+
+          </ul>
         </nav>
 
-        <h2>burger</h2>
+        
     </div>
 
    
 </header>
 
-    <!-- <aside>
-        <div class="side-menu">
-            <div class="side-link">Link 1</div>
-            <div class="side-link">Llink 2</div>
-            <div class="side-link">Link 3</div>
-        </div>
-    </aside> -->
-
- 
 
   <section>
 
-    <div class="landing-page">
+    <div class="landing-page" id="home">
+      <div class="overlay"></div>
     <div class="hero-section">
 
 
       <div class="hero-content">
-        <h1 data-aos="fade-up">Learn French in 30 Days!</h1>
-        <p data-aos="fade-up">Sign up today and start your French learning journey!</p>
+        <h1 data-aos="fade-up">Get your online course From us Today</h1>
+        <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus at, natus amet iure unde maxime, nostrum porro excepturi, esse maiores possimus dolorum debitis ipsa deleniti reiciendis tenetur voluptate sit eum!</p>
       </div>
 
       <div class="logo">
-        <img src="TAB-GIRL.jpg" alt="French Course" class="product-image">
+
+        <img src="tabgirl.png" alt="French Course" class="product-image">
+
+        <div class="circle">
+          
+        </div>
+
+        <div class="circle2">
+          
+        </div>
       </div>
 
       
     </div>
     </div>
-<!-- 
-    <div class="landing-page">
-      <div class="hero-section" >
-  
-        <div class="logo">
-          <img src="TAB-GIRL.jpg" alt="French Course" class="product-image">
-        </div>
-  
-        <div class="hero-content" >
-          <h1>Learn French in 30 Days!</h1>
-          <p>Sign up today and start your French learning journey!</p>
-        </div>
-  
-        
-  
-        
-      </div>
-      </div> -->
+
     
-
-    <!-- <div class="divider">
-
-    </div> -->
-
-    <div class="course-row">
-
-      <h2 class="course-header">
-        Courses
-      </h2>
-
-      <div class="course-directors">
-        <button class="left">Prev</button>
-        <button class="right">Next</button>
-      </div>
-
-      <div class="course-container" id="courses">
-
-        <!-- COUSRE 1 -->
-        <div class="course" id="course1" data-aos="zoom-in-up">
-          <div class="course-pic">
-            <img src="SOMEGUY.jpg" alt="" class="item1">
-          </div>
-
-          <div class="course-content">
-            <h3 class="course-name">
-              Course1
-            </h3>
-            <p class="course-detail">course detailed sumary</p>
-            <p>tap to enroll now</p>
-          </div>
-        </div>
-
-        <!-- COURSE 2 -->
-        <div class="course" id="course2" data-aos="zoom-in-up">
-          <div class="course-pic">
-            <img src="SOMEGUY.jpg" alt="" class="item1">
-          </div>
-
-          <div class="course-content">
-            <h3 class="course-name">
-              Course1
-            </h3>
-            <p class="course-detail">course detailed sumary</p>
-            <p>tap to enroll now</p>
-          </div>
-        </div>
-      
-        <!-- COURSE 3 -->
-        <div class="course" id="course3" data-aos="zoom-in-up">
-          <div class="course-pic">
-            <img src="SOMEGUY.jpg" alt="" class="item1">
-          </div>
-
-          <div class="course-content">
-            <h3 class="course-name">
-              Course1
-            </h3>
-            <p class="course-detail">course detailed sumary</p>
-            <p>tap to enroll now</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- <div class="form-container">
-      <h2>Register Now</h2>
-      <form action="payment-link.html" method="get">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" required>
-        <input type="email" name="email" placeholder="Your Email Address" required>
-        <button type="submit">Start Learning Now</button>
-      </form>
-    </div> -->
-
-
   </section>
 
-  <!-- ORDER SECTION -->
-  <section class="order">
-    <div class="course-picture">
-      <img src="TAB-GIRL.jpg" alt="French Course" class="order-image" data-aos="fade-up">
-      <div class="course-summary">
-        <!-- this part should float on the image -->
-        <h2 class="image-title">The Course Name</h2>
-        <button class="image-order-button">
-          Enroll Now
-        </button>
+<!-- COURSE SECTION -->
+
+<section class="course-row" id="order-section">
+  <h2 class="course-header">
+    Courses
+  </h2>
+
+  <div class="course-directors">
+    <div class="left" aria-label="Previous">
+      <i class="fa-solid fa-circle-arrow-left"></i>
+    </div>
+    
+    <div class="right" aria-label="Next">
+      <i class="fa-solid fa-circle-arrow-right"></i>
+    </div>
+  </div>
+
+  <div class="course-container" id="courses">
+
+    <!-- COUSRE 1 -->
+    <div class="course" id="course1" data-aos="zoom-in-up">
+
+      
+        <div class="course-pic">
+          <img src="frenchbook.png" alt="" class="item1">
+        </div>
+      
+      
+
+      <div class="course-content">
+        <h3 class="course-name">
+          Course1
+        </h3>
+        <p class="course-detail">course detailed sumary</p>
+        <p>tap to enroll now</p>
       </div>
+    </div>
+
+    <!-- COURSE 2 -->
+    <div class="course" id="course2" data-aos="zoom-in-up">
+      <div class="course-pic">
+        <img src="frenchbook.png" alt="" class="item1">
+      </div>
+
+      <div class="course-content">
+        <h3 class="course-name">
+          Course1
+        </h3>
+        <p class="course-detail">course detailed sumary</p>
+        <p>tap to enroll now</p>
+      </div>
+    </div>
+  
+    <!-- COURSE 3 -->
+    <div class="course" id="course3" data-aos="zoom-in-up">
+      <div class="course-pic">
+        <img src="frenchbook.png" alt="" class="item1">
+      </div>
+
+      <div class="course-content">
+        <h3 class="course-name">
+          Course1
+        </h3>
+        <p class="course-detail">course detailed sumary</p>
+        <p>tap to enroll now</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ORDER SECTION -->
+  <section class="order" id="order" >
+
+    <div class="cancel-button" id="cancelOrder">
+      <img src="cancel-svgrepo-com.svg" alt="">
+    </div>
+
+    <div class="course-picture">
+      <img src="frenchbook.png" alt="French Course" class="order-image" data-aos="fade-up">
+      
     </div>
   
     <div class="order-content">
       <!-- this part should overlap part of the image and should have curved edges -->
-      <h1 data-aos="fade-up">Learn French in 30 Days</h1>
-      <p data-aos="fade-up">Join our immersive French course designed to help you become conversational in just one month. Easy-to-follow lessons and practical exercises.</p>
+      <h1 >Learn French in 30 Days</h1>
+      <p>Join our immersive French course designed to help you become conversational in just one month. Easy-to-follow lessons and practical exercises.</p>
       <button class="enroll-now">Enroll Now</button>
     </div>
   </section>
   
   
   <!-- endz -->
-
-  <!-- <div class="landing-page">
-    <div class="hero-section">
-
-
-      <div class="hero-content">
-        <h1 data-aos="fade-up">Learn French in 30 Days!</h1>
-        <p data-aos="fade-up">Sign up today and start your French learning journey!</p>
-      </div>
-
-      <div class="logo">
-        <img src="TAB-GIRL.jpg" alt="French Course" class="product-image">
-      </div>
-
-      
-    </div>
-    </div> -->
-  
   
   <footer class="site-footer">
     <div class="footer-container">
       
-      <div class="footer-section about" data-aos="fade-up" data-aos-delay="100">
+      <div class="footer-section about" data-aos="fade-up" data-aos-delay="100" id="about">
         <h3>About Us</h3>
         <p>We help you master French in just 30 days with practical lessons, expert instructors, and engaging materials.</p>
       </div>
@@ -208,16 +189,15 @@
         <ul>
           <li><a href="#home">🏠 Home</a></li>
           <li><a href="#about">ℹ️ About</a></li>
-          <li><a href="#contact">📩 Contact</a></li>
           <li><a href="#courses">📚 Courses</a></li>
         </ul>
       </div>
   
       <div class="footer-section contact" data-aos="fade-up" data-aos-delay="300">
         <h3>Contact</h3>
-        <p><span>📍</span>123 French Lane, Paris</p>
-        <p><span>📞</span>+123 456 7890</p>
-        <p><span>✉️</span>contact@frenchcourse.com</p>
+        <p><span>📍</span>Kaduna North Kaduna, Nigeria</p>
+        <p><span>📞</span>+234 0000 000000</p>
+        <p><span>✉️</span>contact@philipblahblah.com</p>
       </div>
   
       <div class="footer-section newsletter" data-aos="fade-up" data-aos-delay="400">
@@ -232,10 +212,10 @@
     <div class="footer-bottom">
       <div class="social-icons">
         <!-- Replace these texts with actual icons later -->
-        <span>[Facebook Icon]</span>
-        <span>[Twitter Icon]</span>
-        <span>[Instagram Icon]</span>
-        <span>[LinkedIn Icon]</span>
+        <span class="media-icon fb"><i class="fa-brands fa-facebook"></i></span>
+        <span class="media-icon tok"><i class="fa-brands fa-tiktok "></i></span>
+        <span class="media-icon wsp"><i class="fa-brands fa-square-whatsapp"></i></span>
+        <span class="media-icon ig"><i class="fa-brands fa-square-instagram"></i></span>
       </div>
       <p >&copy; 2025 French Course. All rights reserved.</p>
       <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
