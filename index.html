@@ -7,7 +7,7 @@
   <!-- AOS CSS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <title>Frsench Course</title>
+  <title>French Course</title>
   <link rel="stylesheet" href="style2.css">
 </head>
 <body>
@@ -85,12 +85,17 @@
 
 <!-- COURSE SECTION -->
 
-<section class="course-row" id="order-section">
+<section class="course-section">
+
   <h2 class="course-header">
     Courses
   </h2>
 
-  <div class="course-directors">
+ 
+
+  <div class="courrse-container">
+
+     <div class="course-directors">
     <div class="left" aria-label="Previous">
       <i class="fa-solid fa-circle-arrow-left"></i>
     </div>
@@ -100,78 +105,67 @@
     </div>
   </div>
 
-  <div class="course-container" id="courses">
-
-    <!-- COUSRE 1 -->
-    <div class="course" id="course1" data-aos="zoom-in-up">
-
-      
-        <div class="course-pic">
-          <img src="frenchbook.png" alt="" class="item1">
-        </div>
-      
-      
-
-      <div class="course-content">
-        <h3 class="course-name">
-          Course1
-        </h3>
-        <p class="course-detail">course detailed sumary</p>
-        <p>tap to enroll now</p>
+  <div class="book" id="bok1">
+      <div class="image-part">
+        <!-- Add image or content here -->
+        <img src="frenchbook.png" alt="Book 1">
       </div>
-    </div>
-
-    <!-- COURSE 2 -->
-    <div class="course" id="course2" data-aos="zoom-in-up">
-      <div class="course-pic">
-        <img src="frenchbook.png" alt="" class="item1">
+      <div class="book-description">
+        <!-- Add description here -->
+        <h3>Book 1 Title</h3>
+        <p>Short description of Book 1.</p>
       </div>
-
-      <div class="course-content">
-        <h3 class="course-name">
-          Course1
-        </h3>
-        <p class="course-detail">course detailed sumary</p>
-        <p>tap to enroll now</p>
-      </div>
-    </div>
-  
-    <!-- COURSE 3 -->
-    <div class="course" id="course3" data-aos="zoom-in-up">
-      <div class="course-pic">
-        <img src="frenchbook.png" alt="" class="item1">
-      </div>
-
-      <div class="course-content">
-        <h3 class="course-name">
-          Course1
-        </h3>
-        <p class="course-detail">course detailed sumary</p>
-        <p>tap to enroll now</p>
-      </div>
-    </div>
   </div>
+
+  <div class="book" id="bok2">
+      <div class="image-part">
+        <!-- Add image or content here -->
+        <img src="frenchbook.png" alt="Book 2">
+      </div>
+      <div class="book-description">
+        <!-- Add description here -->
+        <h3>Book 2 Title</h3>
+        <p>Short description of Book 2.</p>
+      </div>
+  </div>
+
+  <div class="book" id="bok3">
+      <div class="image-part">
+        <!-- Add image or content here -->
+        <img src="frenchbook.png" alt="Book 3">
+      </div>
+      <div class="book-description">
+        <!-- Add description here -->
+        <h3>Book 3 Title</h3>
+        <p>Short description of Book 3.</p>
+      </div>
+  </div>
+
+  
+  </div>
+
 </section>
 
-  <!-- ORDER SECTION -->
-  <section class="order" id="order" >
+<section class="order" id="order">
+  <div class="order-container">
+  <div class="cancel-button" id="cancelOrder">
+    <img src="cancel-svgrepo-com.svg" alt="">
+  </div>
 
-    <div class="cancel-button" id="cancelOrder">
-      <img src="cancel-svgrepo-com.svg" alt="">
-    </div>
+  <div class="course-picture">
+    <img src="frenchbook.png" alt="French Course" class="order-image" data-aos="fade-up">
+       
+  </div>
 
-    <div class="course-picture">
-      <img src="frenchbook.png" alt="French Course" class="order-image" data-aos="fade-up">
-      
-    </div>
-  
-    <div class="order-content">
-      <!-- this part should overlap part of the image and should have curved edges -->
-      <h1 >Learn French in 30 Days</h1>
-      <p>Join our immersive French course designed to help you become conversational in just one month. Easy-to-follow lessons and practical exercises.</p>
-      <button class="enroll-now">Enroll Now</button>
-    </div>
-  </section>
+  <div class="order-content">
+    <!-- this part should overlap part of the image and should have curved edges -->
+
+    <h1 >Learn French in 30 Days</h1>
+    <p>Join our immersive French course designed to help you become conversational in just one month. Easy-to-follow lessons and practical exercises.</p>
+    <button class="enroll-now">Enroll Now</button>
+  </div>
+  </div>
+</section>
   
   
   <!-- endz -->
@@ -220,13 +214,16 @@
       <p >&copy; 2025 French Course. All rights reserved.</p>
       <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
     </div>
+  </div>
   </footer>
   
 
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+    
+  </script>
 
 </body>
 </html>
