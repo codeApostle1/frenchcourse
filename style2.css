@@ -277,7 +277,7 @@
       width: 100%;
       position: relative;
       overflow: hidden;
-      border: 2px solid green;
+      /* border: 2px solid green; */
       scroll-behavior: smooth;
       justify-content: center;
       align-items: center;
