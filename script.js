@@ -142,3 +142,9 @@ function cancelDropdown() {
 
 if (menuIcon) menuIcon.addEventListener('click', showMenu);
 if (cancelMenu) cancelMenu.addEventListener('click', cancelDropdown);
+
+document.addEventListener('click', (event) => {
+  if (sidebar && !sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+    sidebar.classList.remove('show');
+  }
+});
