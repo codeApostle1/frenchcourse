@@ -111,6 +111,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     transition: right 0.5s ease;
+    padding-top: 20px;
   }
 
 @media (min-width: 770px) {
@@ -338,7 +339,7 @@
     height: 30px;
     width: 30px;
     position: absolute;
-    top: -5%;
+    top: -3%;
     left: 5%;
     cursor: pointer;
     z-index: 7000;
