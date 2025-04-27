@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self' https:; style-src 'self' https:;">
-<meta name="referrer" content="no-referrer">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self' https:; style-src 'self' https:;"> -->
+
+  <!-- <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' https:;
+  script-src 'self' https:;
+  style-src 'self' https: 'unsafe-inline';
+  font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+"> -->
+
+
+  <meta name="referrer" content="no-referrer">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -166,7 +176,7 @@
 
     <h1 >Learn French in 30 Days</h1>
     <p>Join our immersive French course designed to help you become conversational in just one month. Easy-to-follow lessons and practical exercises.</p>
-    <button class="enroll-now">Enroll Now</button>
+    <button aria-label="Enroll in French Course" class="enroll-now">Enroll Now</button>
   </div>
   </div>
 </section>
@@ -194,8 +204,9 @@
       <div class="footer-section contact" data-aos="fade-up" data-aos-delay="300">
         <h3>Contact</h3>
         <p><span>📍</span>Kaduna North Kaduna, Nigeria</p>
-        <p><span>📞</span>+234 0000 000000</p>
-        <p><span>✉️</span>contact@philipblahblah.com</p>
+        <p><span>📞</span ><a href="javascript:void(0);" class="contact-d">+1239128765496</a>
+        </p>
+        <p><span>✉️</span> <a  href="https://mail.google.com/mail/?view=cm&to=example@gmail.com" target="_blank" class="contact-d">king8philips@gmail.com</a></p>
       </div>
   
       <div class="footer-section newsletter" data-aos="fade-up" data-aos-delay="400">

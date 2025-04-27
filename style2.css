@@ -714,6 +714,13 @@
   } */
 
 }
+.contact-d {
+  cursor: pointer;
+  color: var(--background-color);
+}
+.footer-section span {
+  cursor: pointer;
+}
 
 @media (max-width : 400px) {
   .sidebar {
