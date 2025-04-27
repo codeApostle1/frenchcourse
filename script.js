@@ -152,7 +152,7 @@ document.addEventListener('click', (event) => {
 document.querySelector('.contact-d').addEventListener('click', confirmCall);
 
 function confirmCall() {
-  if (confirm('Do you want to call +1234567890?')) {
-    window.location.href = 'tel:+1234567890';
+  if (confirm('Do you want to call +2349128765496?')) {
+    window.location.href = 'tel:+2349128765496';
   }
 }
