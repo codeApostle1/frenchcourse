@@ -103,7 +103,7 @@
 // // window.addEventListener('resize', updateCarousel);
 
 
-AOS.init({
+  AOS.init({
   duration: 1000,
   offset: 100,
 });
@@ -149,8 +149,8 @@ document.addEventListener('click', (event) => {
   }
 });
 
-document.querySelector('.contact-d').addEventListener('click', confirmCall);
-
+const contactBtn = document.querySelector('.contact-d');
+if (contactBtn) contactBtn.addEventListener('click', confirmCall);
 function confirmCall() {
   if (confirm('Do you want to call +2349128765496?')) {
     window.location.href = 'tel:+2349128765496';
