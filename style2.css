@@ -5,6 +5,7 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Arial', sans-serif;
+
   }
   
   :root {
@@ -459,6 +460,11 @@
     width: 100%;
     text-align: center;
   }
+
+  /* .enroll-now a {
+    color: white;
+    text-decoration: none;
+  } */
   
   .enroll-now:hover {
     background-color: red;
