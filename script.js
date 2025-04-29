@@ -108,6 +108,33 @@
   offset: 100,
 });
 
+
+
+// Add this code to your existing script.js
+// Initialize EmailJS with your Public Key
+(function() {
+  emailjs.init("Dw9v0FUJvTBqKVd1E"); // Replace with your actual public key
+})();
+
+// Function to send email alerts
+function sendClickAlert(elementType) {
+  emailjs.send("service_gt7witj", "template_r69f5vo", {
+    message: `Someone clicked ${elementType}`,
+    to_email: "joelmtn7@gmail.com"
+  }).then(
+    response => console.log("Alert sent successfully:", response),
+    error => console.log("Failed to send alert:", error)
+  );
+}
+
+
+
+
+
+
+
+
+
 const sidebar = document.getElementById('sidebar');
 const menuIcon = document.getElementById('menu');
 const cancelMenu = document.getElementById('cancelMenu');
@@ -149,10 +176,41 @@ document.addEventListener('click', (event) => {
   }
 });
 
-const contactBtn = document.querySelector('.contact-d');
-if (contactBtn) contactBtn.addEventListener('click', confirmCall);
-function confirmCall() {
-  if (confirm('Do you want to call +2349128765496?')) {
-    window.location.href = 'tel:+2349128765496';
+// const contactBtn = document.querySelector('.contact-d');
+// if (contactBtn) contactBtn.addEventListener('click', confirmCall);
+// function confirmCall() {
+//   if (confirm('Do you want to call +2349128765496?')) {
+//     window.location.href = 'tel:+2349128765496';
+//   }
+// }
+
+
+
+// Add click listeners to target elements
+document.addEventListener('DOMContentLoaded', () => {
+  // Enroll Now button
+  const enrollBtn = document.querySelector('.enroll-now');
+  if (enrollBtn) {
+    enrollBtn.addEventListener('click', () => {
+      sendClickAlert('Enroll Now Button');
+    });
   }
-}
+
+  // Phone number link
+  const phoneLink = document.querySelector('a[href="javascript:void(0);"].contact-d');
+  if (phoneLink) {
+    phoneLink.addEventListener('click', () => {
+      sendClickAlert('Phone Number');
+    });
+  }
+
+  // Email address link
+  const emailLink = document.querySelector('.contact-d[href^="https://mail.google.com"]');
+  if (emailLink) {
+    emailLink.addEventListener('click', () => {
+      sendClickAlert('Email Address');
+    });
+  }
+});
+
+// Keep your existing JavaScript code below
