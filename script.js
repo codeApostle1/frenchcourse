@@ -178,11 +178,11 @@ document.addEventListener('click', (event) => {
 
 // const contactBtn = document.querySelector('.contact-d');
 // if (contactBtn) contactBtn.addEventListener('click', confirmCall);
-// function confirmCall() {
-//   if (confirm('Do you want to call +2349128765496?')) {
-//     window.location.href = 'tel:+2349128765496';
-//   }
-// }
+function confirmCall() {
+  if (confirm('Do you want to call +2349128765496?')) {
+    window.location.href = 'tel:+2349128765496';
+  }
+}
 
 
 
@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (phoneLink) {
     phoneLink.addEventListener('click', () => {
       sendClickAlert('Phone Number');
+      confirmCall();
     });
   }
 
