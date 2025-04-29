@@ -1,217 +1,196 @@
-// AOS.init({
-//     duration: 1000,
-//     offset: 100,
-   
-//   });
-
-//   const sidebar = document.getElementById('sidebar');
-//   const menuIcon = document.getElementById('menu');
-//   const cancelMenu = document.getElementById('cancelMenu');
-
-//   const course1 = document.getElementById('course1');
-//   const course2 = document.getElementById('course2');
-//   const course3 = document.getElementById('course3');
-
-//   const orderPop = document.getElementById('order');
-//   const cancelOrderBtn = document.getElementById('cancelOrder');
-
-//   function coursePop() {
-//     orderPop.style.display = 'flex';
-
-//   }
-
-//   function cancelOrder() {
-//     orderPop.style.display = 'none'
-//   }
-
-//   course1.addEventListener('click', coursePop);
-//   course2.addEventListener('click', coursePop);
-//   course3.addEventListener('click', coursePop);
-
-//   cancelOrderBtn.addEventListener('click', cancelOrder)
-
-//   menuIcon.addEventListener('click', showMenu)
-//   cancelMenu.addEventListener('click', cancelDropdown)
-
-//   function showMenu() {
-//     sidebar.classList.add("show");
-//   }
-
-//   function cancelDropdown() {
-//    sidebar.classList.remove("show");
-//   }
-
-  
-// // CORSE SLIDER 
-
-// // const slides = document.querySelectorAll('.course-slide');
-// // const prev = document.querySelector('.left');
-// // const next = document.querySelector('.right');
-// // let currentSlide = 0;
-
-// // function showSlide(index) {
-// //   slides.forEach((slide, i) => {
-// //     slide.classList.remove('active');
-// //     if (i === index) {
-// //       slide.classList.add('active');
-// //     }
-// //   });
-// // }
-
-// // prev.addEventListener('click', () => {
-// //   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-// //   showSlide(currentSlide);
-// // });
-
-// // next.addEventListener('click', () => {
-// //   currentSlide = (currentSlide + 1) % slides.length;
-// //   showSlide(currentSlide);
-// // });
-
-// // const courseContainer = document.getElementById('courses');
-// // const slides = document.querySelectorAll('.course-slide');
-// // const prevBtn = document.querySelector('.left');
-// // const nextBtn = document.querySelector('.right');
-// // let currentIndex = 0;
-
-// // function updateCarousel() {
-// //   const slideWidth = slides[0].clientWidth;
-// //   courseContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-// // }
-
-// // nextBtn.addEventListener('click', () => {
-// //   if (currentIndex < slides.length - 1) {
-// //     currentIndex++;
-// //   } else {
-// //     currentIndex = 0; // loop back to first
-// //   }
-// //   updateCarousel();
-// // });
-
-// // prevBtn.addEventListener('click', () => {
-// //   if (currentIndex > 0) {
-// //     currentIndex--;
-// //   } else {
-// //     currentIndex = slides.length - 1; // go to last
-// //   }
-// //   updateCarousel();
-// // });
-
-///////////////////////////////////////////////
-
-
-// // window.addEventListener('resize', updateCarousel);
-
-
-  AOS.init({
+// Initialize animations
+AOS.init({
   duration: 1000,
   offset: 100,
 });
 
-
-
-// Add this code to your existing script.js
-// Initialize EmailJS with your Public Key
+// Initialize EmailJS
 (function() {
-  emailjs.init("Dw9v0FUJvTBqKVd1E"); // Replace with your actual public key
+  emailjs.init("Dw9v0FUJvTBqKVd1E");
 })();
 
-// Function to send email alerts
-function sendClickAlert(elementType) {
-  emailjs.send("service_gt7witj", "template_r69f5vo", {
-    message: `Someone clicked ${elementType}`,
-    to_email: "joelmtn7@gmail.com"
-  }).then(
-    response => console.log("Alert sent successfully:", response),
-    error => console.log("Failed to send alert:", error)
-  );
-}
+// DOM Elements
+const elements = {
+  sidebar: document.getElementById('sidebar'),
+  menuIcon: document.getElementById('menu'),
+  cancelMenu: document.getElementById('cancelMenu'),
+  course1: document.getElementById('bok1'),
+  course2: document.getElementById('bok2'),
+  course3: document.getElementById('bok3'),
+  orderPop: document.getElementById('order'),
+  cancelOrderBtn: document.getElementById('cancelOrder'),
+  newsletterForm: document.querySelector('.newsletter form')
+};
 
-
-
-
-
-
-
-
-
-const sidebar = document.getElementById('sidebar');
-const menuIcon = document.getElementById('menu');
-const cancelMenu = document.getElementById('cancelMenu');
-
-const course1 = document.getElementById('bok1');
-const course2 = document.getElementById('bok2');
-const course3 = document.getElementById('bok3');
-
-const orderPop = document.getElementById('order');
-const cancelOrderBtn = document.getElementById('cancelOrder');
-
-function coursePop() {
-  if (orderPop) orderPop.style.display = 'flex';
-}
-
-function cancelOrder() {
-  if (orderPop) orderPop.style.display = 'none';
-}
-
-if (course1) course1.addEventListener('click', coursePop);
-if (course2) course2.addEventListener('click', coursePop);
-if (course3) course3.addEventListener('click', coursePop);
-if (cancelOrderBtn) cancelOrderBtn.addEventListener('click', cancelOrder);
-
-function showMenu() {
-  if (sidebar) sidebar.classList.add('show');
-}
-
-function cancelDropdown() {
-  if (sidebar) sidebar.classList.remove('show');
-}
-
-if (menuIcon) menuIcon.addEventListener('click', showMenu);
-if (cancelMenu) cancelMenu.addEventListener('click', cancelDropdown);
-
-document.addEventListener('click', (event) => {
-  if (sidebar && !sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
-    sidebar.classList.remove('show');
+// Menu functionality
+function toggleMenu(show = true) {
+  if (elements.sidebar) {
+    elements.sidebar.classList.toggle('show', show);
   }
-});
+}
 
-// const contactBtn = document.querySelector('.contact-d');
-// if (contactBtn) contactBtn.addEventListener('click', confirmCall);
+if (elements.menuIcon) {
+  elements.menuIcon.addEventListener('click', () => toggleMenu(true));
+}
+
+if (elements.cancelMenu) {
+  elements.cancelMenu.addEventListener('click', () => toggleMenu(false));
+}
+
+// Course popup functionality
+function toggleCoursePopup(show = true) {
+  if (elements.orderPop) {
+    elements.orderPop.style.display = show ? 'flex' : 'none';
+  }
+}
+
+if (elements.course1) elements.course1.addEventListener('click', () => toggleCoursePopup(true));
+if (elements.course2) elements.course2.addEventListener('click', () => toggleCoursePopup(true));
+if (elements.course3) elements.course3.addEventListener('click', () => toggleCoursePopup(true));
+if (elements.cancelOrderBtn) elements.cancelOrderBtn.addEventListener('click', () => toggleCoursePopup(false));
+
+// Click tracking functions
+function sendClickAlert(elementType, recipient = "joelmtn7@gmail.com") {
+  return emailjs.send("service_gt7witj", "template_r69f5vo", {
+    message: `User clicked ${elementType} at ${new Date().toLocaleString()}`,
+    to_email: recipient
+  });
+}
+
 function confirmCall() {
   if (confirm('Do you want to call +2349128765496?')) {
     window.location.href = 'tel:+2349128765496';
+    sendClickAlert('Phone Number Call Initiated');
   }
 }
 
+// Message form handling
+function handleMessageForm() {
+  if (!elements.newsletterForm) return;
 
+  elements.newsletterForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const input = elements.newsletterForm.querySelector('input[name="message"]');
+    const btn = elements.newsletterForm.querySelector('button[type="submit"]');
+    const message = input.value.trim();
+    
+    if (!message) {
+      showAlert('Please enter your message', 'error');
+      return;
+    }
 
-// Add click listeners to target elements
+    if (message.length > 500) {
+      showAlert('Message too long (max 500 characters)', 'error');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+      // Send notification to your friend
+      // await emailjs.send("service_gt7witj", "template_r69f5vo", {
+      //   message_content: message,
+      //   sender_info: 'From website contact form',
+      //   date: new Date().toLocaleString(),
+      //   to_email: "joelademola3max@gmail.com"
+      // });
+
+      // Updated working version:
+await emailjs.send("service_gt7witj", "template_r69f5vo", {
+  message: message,  // Must match template variables exactly
+  to_email: "joelademola3max@gmail.com",
+  date: new Date().toLocaleString()
+});
+      
+      // Also send a copy to yourself if needed
+      await sendClickAlert('New Message Submission: ' + message.substring(0, 50) + '...');
+      
+      showAlert('Your message has been sent!', 'success');
+      input.value = '';
+    } catch (error) {
+      console.error('Error:', error);
+      showAlert('Failed to send message. Please try again.', 'error');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send';
+    }
+  });
+}
+
+// UI Feedback
+function showAlert(message, type = 'info') {
+  // Remove existing alerts
+  const existingAlert = document.querySelector('.custom-alert');
+  if (existingAlert) existingAlert.remove();
+
+  const alert = document.createElement('div');
+  alert.className = `custom-alert ${type}`;
+  alert.textContent = message;
+  document.body.appendChild(alert);
+
+  setTimeout(() => {
+    alert.style.opacity = '0';
+    setTimeout(() => alert.remove(), 500);
+  }, 3000);
+}
+
+// Event listeners
 document.addEventListener('DOMContentLoaded', () => {
-  // Enroll Now button
+  // Click tracking
   const enrollBtn = document.querySelector('.enroll-now');
   if (enrollBtn) {
-    enrollBtn.addEventListener('click', () => {
-      sendClickAlert('Enroll Now Button');
-    });
+    enrollBtn.addEventListener('click', () => sendClickAlert('Enroll Now Button'));
   }
 
-  // Phone number link
   const phoneLink = document.querySelector('a[href="javascript:void(0);"].contact-d');
   if (phoneLink) {
     phoneLink.addEventListener('click', () => {
-      sendClickAlert('Phone Number');
+      sendClickAlert('Phone Number Link');
       confirmCall();
     });
   }
 
-  // Email address link
   const emailLink = document.querySelector('.contact-d[href^="https://mail.google.com"]');
   if (emailLink) {
-    emailLink.addEventListener('click', () => {
-      sendClickAlert('Email Address');
-    });
+    emailLink.addEventListener('click', () => sendClickAlert('Email Address Link'));
   }
+
+  // Message form
+  handleMessageForm();
+
+  // Close sidebar when clicking outside
+  document.addEventListener('click', (event) => {
+    if (elements.sidebar && !elements.sidebar.contains(event.target) && 
+        !elements.menuIcon.contains(event.target)) {
+      toggleMenu(false);
+    }
+  });
 });
 
-// Keep your existing JavaScript code below
+// Add CSS for alerts
+const style = document.createElement('style');
+style.textContent = `
+  .custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1000;
+    transition: opacity 0.5s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .custom-alert.success {
+    background-color: #4CAF50;
+  }
+  .custom-alert.error {
+    background-color: #F44336;
+  }
+  .custom-alert.info {
+    background-color: #2196F3;
+  }
+`;
+document.head.appendChild(style);

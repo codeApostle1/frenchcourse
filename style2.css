@@ -589,7 +589,7 @@
     margin: 8px 0;
   }
   
-  .footer-section input[type="email"] {
+  .footer-section input[type="text"] {
     padding: 10px;
     border: none;
     border-radius: 4px;
